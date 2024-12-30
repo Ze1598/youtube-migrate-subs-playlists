@@ -1,5 +1,4 @@
-# youtube-migrate-subs-playlists
-Migrate your subscriptions and playlists to a new account.
+# Migrate your subscriptions and playlists to a new account.
 
 This process is free, but you will need to follow the instructions below.
 

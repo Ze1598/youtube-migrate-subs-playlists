@@ -21,7 +21,7 @@ pip install google-auth-oauthlib google-auth-httplib2 google-api-python-client
 ## Google Cloud Project & YouTube Data API enablement
 
 * Go to the Google Cloud Console to [create a new project](https://console.cloud.google.com/projectcreate)
-* Enable the [YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=youtube-migration-446305) (you can also search for the API via the search box at the top or navigate through the APIs & Services menu)
+* Enable the [YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com) (you can also search for the API via the search box at the top or navigate through the APIs & Services menu)
 * Within the APIs & Services menu, go to the Credentials submenu and [create new OAuth Client ID credentials](https://console.cloud.google.com/apis/credentials/oauthclient)
 * When prompted for Application Type, choose Desktop App. This is because the script uses the `InstalledAppFlow` class from `google_auth_oauthlib.flow`, which is designed for desktop applications
 * Download the client secrets file and rename it to client_secrets.json - download the file into the same directory as the main.py script and no further changes are required

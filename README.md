@@ -46,7 +46,7 @@ The script will:
 * Prompt you to authenticate both your source and destination YouTube accounts in the browser (standard Google account authentication page)
 * (After authentication, follow the instructions in the command line)
 * Ask for the names of playlists you want to migrate and for those migrate the playlists with all their videos
-* Ask if you want to migrate subscriptions and if yes migrate all subscriptiions
+* Ask if you want to migrate subscriptions and if yes migrate all subscriptions
 * Provide progress updates during the migration
 
 ## Important notes

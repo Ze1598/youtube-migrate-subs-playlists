@@ -242,9 +242,20 @@ class YouTubeMigrator:
         source_service = self.get_youtube_service(self.source_credentials)
         dest_service = self.get_youtube_service(self.destination_credentials)
         
-        # Get subscriptions from source account
-        subscriptions = self.get_subscriptions(source_service)
-        
+        # Get subscriptions from both accounts
+        source_subscriptions = self.get_subscriptions(source_service)
+        dest_subscriptions = self.get_subscriptions(dest_service)
+
+        # Filter out already subscribed channels
+        subscriptions = [
+            source_sub
+            for source_sub in source_subscriptions
+            if not any(
+                target_sub["channelId"] == source_sub["channelId"]
+                for target_sub in dest_subscriptions
+            )
+        ]
+
         print(f"\nMigrating {len(subscriptions)} subscriptions...")
         for sub in subscriptions:
             success = self.subscribe_to_channel(dest_service, sub['channelId'])
